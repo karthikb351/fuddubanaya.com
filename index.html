@@ -37,14 +37,17 @@
                           <!-- main col right -->
                           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><h4>Do you support Free Basics, Digital Equality and Internet for all?</h4></div>
+                                 <div class="panel-heading"><h4 id="question">Do you support Free Basics, Digital Equality and Internet for all?<a id="xBtn" href="#" class="glyphicon glyphicon-remove pull-right" aria-hidden="true" style="display:none;"></a></h4></div>
                                 <div class="panel-thumbnail" id="fbImg" style="display: none;"><img src="img/fb.gif" class="img-responsive" style="margin: 0 auto;"></div>
                                 <div class="panel-body">
-                                  <div class="text-center"><button id="btnYes" class="btn btn-lg btn-primary" type="button">Yes</button></div>
-                                  <div id="moreInfo" style="display:none;" >
-                                    <div class="well">
-                                      <p>Free Basics is just Internet.org with a different name.</p>
+                                  <div class="text-center"><button id="btnYes" class="btn btn-lg btn-primary" type="button">Yes</button>  <button id="btnNotNow" class="btn btn-lg btn-default" type="button">Not Now</button></div>
+                                  <div id="hint" class="text-center" style="display:none;"><p></p></div>
+                                  <div id="moreInfo" style="display:none;">
+                                    <div class="text-center">
+                                      <h4>Free Basics is just Internet.org with a different name.</h4>
+                                      <h4>Tell the TRAI you want real Net Neutrality, not one defined by Facebook.</h4>
                                     </div>
+                                    <hr>
                                   <p class="text-center"><a role="button" class="btn btn-lg btn-info" href="http://savetheinternet.in">Stand up for Net Neutrality<a></p>
                                   </div>
                                 </div>
@@ -65,14 +68,41 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
-
+    var count = 0;
       $(function() {
         $('#btnYes').on('click', function() {
           $('#title').text("Fuddu Banaya");
           $('#logo').html("fb");
           $('#btnYes').hide();
+          $('#btnNotNow').hide();
+          $('#hint').hide();
           $('#fbImg').fadeIn();
           $('#moreInfo').fadeIn();
+        });
+        $('#btnNotNow').on('click', function() {
+            count = count + 1;
+            if (count == 3) {
+              $('#hint').fadeIn();
+              $('#hint').html("Stop clicking. This button doesn't do anything.");
+            };
+            if (count == 6) {
+              $('#hint').html("Seriously, it's just there to make it look like you have a choice.");
+            }
+            if (count == 9) {
+              $('#hint').html("Look, I'm not going away till you click Yes.");
+            }
+            if (count == 12) {
+              $('#hint').html("Okay, suit yourself.");
+            }
+            if (count == 13) {
+              $('#hint').fadeOut();
+              $('#btnNotNow').fadeOut(function() {
+                $('#xBtn').fadeIn();
+              });
+            }
+        });
+        $('#xBtn').on('click', function() {
+          $('#xBtn').fadeOut();
         });
       });
 
