@@ -53,12 +53,14 @@
                                   <div class="text-center"><button id="btnYes" class="btn btn-lg btn-primary" type="button">Yes</button>  <button id="btnNotNow" class="btn btn-lg btn-default" type="button">Not Now</button></div>
                                   <div id="hint" class="text-center" style="display:none;"><p></p></div>
                                   <div id="moreInfo" style="display:none;">
+                                     <p class="text-center hidden-md hidden-lg"><a role="button" class="btn btn-lg btn-info" href="http://savetheinternet.in">Stand up for Net Neutrality<a></p>
+                                     <hr class="hidden-md hidden-lg">
                                     <div class="text-center">
                                       <h4>Free Basics is just Internet.org with a different name.</h4>
                                       <h4>Tell the TRAI you want real Net Neutrality, not one defined by Facebook.</h4>
                                     </div>
-                                    <hr>
-                                  <p class="text-center"><a role="button" class="btn btn-lg btn-info" href="http://savetheinternet.in">Stand up for Net Neutrality<a></p>
+                                    <hr class="hidden-xs hidden-sm">
+                                  <p class="text-center hidden-xs hidden-sm"><a role="button" class="btn btn-lg btn-info" href="http://savetheinternet.in">Stand up for Net Neutrality<a></p>
                                   </div>
                                 </div>
                                </div>
@@ -89,6 +91,7 @@
           $('#fbImg').fadeIn();
           $('#moreInfo').fadeIn();
           $('#footer').fadeIn();
+          
         });
         $('#btnNotNow').on('click', function() {
             count = count + 1;
