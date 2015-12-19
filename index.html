@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title id="title">Free Basics</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<div class="wrapper">
+    <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">
+          
+            <!-- main right col -->
+            <div class="column col-sm-12 col-xs-12" id="main">
+                
+                <!-- top nav -->
+              	<div class="navbar navbar-blue navbar-static-top">  
+                    <div class="navbar-header">
+                      <a id="logo" href="/" class="navbar-brand logo">f</a>
+                  	</div>
+                </div>
+                <!-- /top nav -->
+              
+                <div class="padding">
+                    <div class="full col-sm-9">
+                      
+                        <!-- content -->                      
+                      	<div class="row">
+                          
+                          <!-- main col right -->
+                          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+                               <div class="panel panel-default">
+                                 <div class="panel-heading"><h4>Do you support Digital Equality and Internet for all?</h4></div>
+                                <div class="panel-thumbnail" id="cbImg" style="display: none;"><img src="img/cb.gif" class="img-responsive" style="margin: 0 auto;"></div>
+                                <div class="panel-body">
+                                  <div class="text-center"><button id="btnYes" class="btn btn-lg btn-primary" type="button">Yes</button></div>
+                                  <div id="moreInfo" style="display:none;" >
+                                    <div class="well">
+                                      <p>Free Basics is just Internet.org with different branding.</p>
+                                    </div>
+                                  <p class="text-center"><a role="button" class="btn btn-lg btn-info" href="http://savetheinternet.in">Stand up for Net Neutrality<a></p>
+                                  </div>
+                                </div>
+                               </div>
+                            
+                          </div>
+                       </div><!--/row-->
+                      
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+          
+        </div>
+    </div>
+</div>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+
+      $(function() {
+        $('#btnYes').on('click', function() {
+          $('#title').text("Chutiya Banaya");
+          $('#logo').html("cb");
+          $('#btnYes').hide();
+          $('#cbImg').fadeIn();
+          $('#moreInfo').fadeIn();
+        });
+      });
+
+    </script>
+	</body>
+</html>
