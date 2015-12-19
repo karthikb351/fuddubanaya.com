@@ -37,13 +37,13 @@
                           <!-- main col right -->
                           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><h4>Do you support Digital Equality and Internet for all?</h4></div>
-                                <div class="panel-thumbnail" id="cbImg" style="display: none;"><img src="img/cb.gif" class="img-responsive" style="margin: 0 auto;"></div>
+                                 <div class="panel-heading"><h4>Do you support Free Basics, Digital Equality and Internet for all?</h4></div>
+                                <div class="panel-thumbnail" id="fbImg" style="display: none;"><img src="img/fb.gif" class="img-responsive" style="margin: 0 auto;"></div>
                                 <div class="panel-body">
                                   <div class="text-center"><button id="btnYes" class="btn btn-lg btn-primary" type="button">Yes</button></div>
                                   <div id="moreInfo" style="display:none;" >
                                     <div class="well">
-                                      <p>Free Basics is just Internet.org with different branding.</p>
+                                      <p>Free Basics is just Internet.org with a different name.</p>
                                     </div>
                                   <p class="text-center"><a role="button" class="btn btn-lg btn-info" href="http://savetheinternet.in">Stand up for Net Neutrality<a></p>
                                   </div>
@@ -68,10 +68,10 @@
 
       $(function() {
         $('#btnYes').on('click', function() {
-          $('#title').text("Chutiya Banaya");
-          $('#logo').html("cb");
+          $('#title').text("Fuddu Banaya");
+          $('#logo').html("fb");
           $('#btnYes').hide();
-          $('#cbImg').fadeIn();
+          $('#fbImg').fadeIn();
           $('#moreInfo').fadeIn();
         });
       });
